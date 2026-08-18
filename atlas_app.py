@@ -9,9 +9,9 @@ st.set_page_config(
 
 WEIGHTS = {
     "data_availability": 0.300,
-    "problem_scope":     0.275,
+    "problem_scope":     0.300,
     "org_maturity":      0.200,
-    "digital_maturity":  0.125,
+    "digital_maturity":  0.100,
     "time_available":    0.100,
 }
 
