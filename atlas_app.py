@@ -126,9 +126,7 @@ def run_topsis(candidates, context):
     for i, fw in enumerate(candidates):
         for j, cr in enumerate(criteria):
             matrix[i, j] = FRAMEWORK_SCORES[fw][cr] * context[cr] / 5
-    norms = np.sqrt((matrix**2).sum(axis=0))
-    norms[norms == 0] = 1
-    norm_matrix = matrix / norms
+    norm_matrix = matrix / 5.0 
     w = np.array([WEIGHTS[c] for c in criteria])
     weighted = norm_matrix * w
     pis = weighted.max(axis=0)
